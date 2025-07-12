@@ -1,165 +1,153 @@
 # 🤖 Intelligent Data Analysis Agent with Grok API
 
-Um agente inteligente de análise de dados que utiliza a API Grok da xAI para fornecer insights detalhados sobre dados de cidades brasileiras.
+Hi! I'm Alexsander Silveira, and I developed this intelligent agent to deliver actionable insights about Brazilian cities using xAI's Grok API. This project is designed to empower professionals, researchers, and organizations to make data-driven decisions quickly and confidently.
 
-## 🚀 Características
+---
 
-- **Análise Inteligente**: Utiliza Grok API para insights avançados
-- **Interface Web**: Streamlit app com visualizações interativas
-- **Sistema de Memória**: Mantém histórico de conversas
-- **Fallback Local**: Respostas locais quando API não está disponível
-- **Múltiplos Idiomas**: Versões em português e inglês
-- **Segurança**: API keys protegidas com variáveis de ambiente
+## 🚀 Why This Project?
 
-## 📋 Pré-requisitos
+- **Democratize Data Intelligence:** Make advanced urban analytics accessible to everyone, not just data scientists.
+- **Accelerate Decision-Making:** Instantly compare cities, spot opportunities, and understand regional trends.
+- **Bridge Data and Action:** Turn raw data into clear, business-relevant insights for real-world impact.
+
+## 🎯 Project Objective
+
+To provide a robust, user-friendly platform for exploring, comparing, and understanding key metrics (population, GDP, unemployment, education) across 200 major Brazilian cities—powered by AI and ready for business, research, or public policy.
+
+## 💡 Key Benefits & ROI
+
+- **Faster Market Analysis:** Reduce research time from hours to seconds.
+- **Better Decisions:** Data-backed recommendations for expansion, investment, or policy.
+- **Cost Savings:** No need for expensive BI tools or custom dashboards.
+- **Scalable:** Ready for new datasets, more cities, or other countries.
+- **Security:** API keys and sensitive data are always protected.
+
+## 🏗️ Architecture Overview
+
+- **Grok API Integration:** Leverages xAI's Grok for natural language analysis and smart responses.
+- **DuckDB Database:** Fast, in-memory analytics on local city data.
+- **Decision Engine:** Confidence-based routing—uses Grok when possible, falls back to local logic if needed.
+- **Memory System:** Remembers chat history and context for a more natural user experience.
+- **Streamlit Web App:** Clean, interactive interface for chat, data visualization, and memory management.
+- **Multilingual:** English and Portuguese support (easily extendable).
+- **Secure Config:** API keys managed via environment variables, never hardcoded.
+
+## 🛠️ Features
+
+- **Conversational Data Analysis:** Ask questions in plain English and get clear, well-formatted answers.
+- **Comparative Insights:** Instantly compare cities, regions, or metrics.
+- **Interactive Visualizations:** Bar charts, rankings, and trends—always sorted for clarity.
+- **Robust Fallback:** Local analysis if the Grok API is unavailable.
+- **Memory & History:** Review previous questions and answers.
+- **Easy Setup:** No complex dependencies—just Python and a few libraries.
+
+## 📋 Requirements
 
 - Python 3.8+
-- Conta na xAI (https://console.x.ai/) para obter API key
+- xAI account and Grok API key ([get yours here](https://console.x.ai/))
 
-## ⚙️ Configuração
+## ⚙️ Setup
 
-### 1. Clone o repositório
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd AI-AGENT-GROK-API
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Configure your API key:**
+   - Copy the example file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` and add your Grok API key:
+     ```env
+     XAI_API_KEY=your_grok_api_key_here
+     XAI_API_URL=https://api.x.ai/v1/chat/completions
+     ```
+
+## 🚦 Usage
+
+### Web Interface (Recommended)
 ```bash
-git clone <seu-repositorio>
-cd AI-AGENT-GROK-API
+# English version
+python3 -m streamlit run agents/english/english_streamlit_app.py --server.port 8501
+
+# Portuguese version
+python3 -m streamlit run agents/portuguese/portuguese_streamlit_app.py --server.port 8502
 ```
 
-### 2. Instale as dependências
+### Command Line
 ```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure a API Key
-
-**IMPORTANTE**: Nunca commite sua API key no GitHub!
-
-1. Copie o arquivo de exemplo:
-```bash
-cp .env.example .env
-```
-
-2. Edite o arquivo `.env` e adicione sua API key:
-```bash
-# Grok API Configuration
-XAI_API_KEY=sua_api_key_aqui
-XAI_API_URL=https://api.x.ai/v1/chat/completions
-```
-
-3. Obtenha sua API key em: https://console.x.ai/
-
-## 🎯 Como Usar
-
-### Interface Web (Recomendado)
-```bash
-# Versão em Português
-python3 -m streamlit run agents/portuguese/portuguese_streamlit_app.py --server.port 8501
-
-# Versão em Inglês
-python3 -m streamlit run agents/english/english_streamlit_app.py --server.port 8502
-```
-
-### Linha de Comando
-```bash
-# Agente principal
 python3 main.py
+```
 
-# Teste da API
+### API Test
+```bash
 python3 test_grok_api.py
 ```
 
-## 📊 Funcionalidades
+## 📊 Example Questions
 
-### Interface Web
-- **Chat Interativo**: Faça perguntas sobre as cidades
-- **Visualizações**: Gráficos e tabelas dos dados
-- **Histórico**: Memória das conversas anteriores
-- **Análises Comparativas**: Compare cidades e regiões
+- "Compare São Paulo and Rio de Janeiro for tech investment."
+- "What are the top 5 cities by GDP per capita?"
+- "How is unemployment in the Northeast?"
+- "Is Fortaleza a good city to live in?"
+- "Show education index rankings for all regions."
 
-### Análises Disponíveis
-- População e densidade demográfica
-- PIB total e per capita
-- Taxa de desemprego
-- Índice de educação
-- Comparações regionais
-- Rankings e tendências
-
-## 🔧 Estrutura do Projeto
+## 🗂️ Project Structure
 
 ```
 AI-AGENT-GROK-API/
 ├── agents/
-│   ├── portuguese/     # Versão em português
-│   └── english/        # Versão em inglês
-├── data/               # Dados das cidades
-├── .env               # Configurações (não commitar!)
-├── .env.example       # Template de configuração
-├── config.py          # Configurações do sistema
-├── grok_api.py        # Integração com Grok API
-├── data_manager.py    # Gerenciamento de dados
-├── memory_manager.py  # Sistema de memória
-├── decision_engine.py # Motor de decisão
-└── requirements.txt   # Dependências
+│   ├── english/        # English version
+│   └── portuguese/     # Portuguese version
+├── data/               # City datasets
+├── .env                # Your API key (never committed)
+├── .env.example        # Template config
+├── config.py           # System configuration
+├── grok_api.py         # Grok API integration
+├── data_manager.py     # Data management
+├── memory_manager.py   # Memory system
+├── decision_engine.py  # Decision engine
+├── requirements.txt    # Dependencies
+└── ...                 # Other modules
 ```
 
-## 🛡️ Segurança
+## 🛡️ Security
 
-- ✅ API keys protegidas em `.env`
-- ✅ `.env` no `.gitignore`
-- ✅ Validação de configuração
-- ✅ Fallback local quando API falha
+- API keys are always stored in `.env` (never in code)
+- `.env` is in `.gitignore` by default
+- Configuration is validated at startup
+- Local fallback ensures no data loss if API fails
 
-## 🔍 Exemplos de Perguntas
+## 🛠️ Troubleshooting
 
-- "Como está São Paulo em comparação com outras cidades?"
-- "Quais são as 5 cidades com maior PIB per capita?"
-- "Como está o desemprego no Nordeste?"
-- "Fortaleza é uma boa cidade para viver?"
-- "Compare Brasília com Curitiba"
+- **API key not found:**
+  - Make sure `.env` exists and contains your key
+  - Never commit `.env` to GitHub
+- **API not responding:**
+  - Check your internet connection
+  - Verify your API key is correct
+  - The system will use local fallback if needed
+- **Port already in use:**
+  - Use a different port, e.g. `--server.port 8503`
 
-## 🚨 Troubleshooting
+## 🤝 Contribution
 
-### Erro: "XAI_API_KEY não encontrada"
-```bash
-# Verifique se o arquivo .env existe
-ls -la .env
+1. Fork this project
+2. Create a feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
 
-# Crie o arquivo se não existir
-cp .env.example .env
-# Edite o arquivo .env com sua API key
-```
+## 📄 License
 
-### API não responde
-- O sistema tem fallback local
-- Verifique sua conexão com a internet
-- Confirme se a API key está correta
+MIT License. See [LICENSE](LICENSE) for details.
 
-### Porta já em uso
-```bash
-# Use uma porta diferente
-python3 -m streamlit run agents/portuguese/portuguese_streamlit_app.py --server.port 8503
-```
-
-## 📈 Melhorias Futuras
-
-- [ ] Suporte a mais idiomas
-- [ ] Análises preditivas
-- [ ] Exportação de relatórios
-- [ ] Integração com mais APIs
-- [ ] Dashboard administrativo
-
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
-
-## 🔗 Links Úteis
+## 🔗 Useful Links
 
 - [xAI Console](https://console.x.ai/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
@@ -167,4 +155,8 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
 
 ---
 
-**⚠️ IMPORTANTE**: Nunca commite arquivos `.env` com suas API keys no GitHub!
+**⚠️ IMPORTANT:** Never commit your `.env` file or API keys to any public repository.
+
+---
+
+*Developed by Alexsander Silveira — empowering data-driven decisions in Brazil and beyond.*
