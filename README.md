@@ -42,6 +42,29 @@ To provide a robust, user-friendly platform for exploring, comparing, and unders
 - **Memory & History:** Review previous questions and answers.
 - **Easy Setup:** No complex dependencies—just Python and a few libraries.
 
+<img width="2838" height="1366" alt="image" src="https://github.com/user-attachments/assets/a90dde5f-6583-4724-9cce-beddef0c6d44" />
+<img width="2814" height="1258" alt="image" src="https://github.com/user-attachments/assets/08dccc37-abaf-403a-bcde-b56b91774ee6" />
+<img width="2832" height="1268" alt="image" src="https://github.com/user-attachments/assets/6435eec3-ddbe-47f5-8410-d5abe6641dd1" />
+<img width="2536" height="1320" alt="image" src="https://github.com/user-attachments/assets/cbe76428-3415-4da3-b795-d281d9483d79" />
+<img width="2770" height="1300" alt="image" src="https://github.com/user-attachments/assets/82f515e4-a8e3-4671-bd31-053ff068f532" />
+<img width="2742" height="1318" alt="image" src="https://github.com/user-attachments/assets/ccb4960c-956b-4ee9-8ddc-010512989cb2" />
+<img width="2790" height="1316" alt="image" src="https://github.com/user-attachments/assets/40d85cd9-23cc-4789-8e09-3beca823a2e4" />
+<img width="1441" height="678" alt="image" src="https://github.com/user-attachments/assets/7abf6841-e448-4fcb-a4dc-0a1c6d10af34" />
+<img width="2788" height="1362" alt="image" src="https://github.com/user-attachments/assets/cc3f5222-afa5-40b8-817b-53c3a4d45864" />
+<img width="2094" height="1086" alt="image" src="https://github.com/user-attachments/assets/57698742-f95d-4f20-8856-f26169ca9e2b" />
+<img width="2786" height="1370" alt="image" src="https://github.com/user-attachments/assets/fd03a1b3-bf9f-40d5-be0a-15301cc3e2b7" />
+<img width="2800" height="1340" alt="image" src="https://github.com/user-attachments/assets/d503a03f-24ca-4908-b611-f38557dfc055" />
+
+
+
+
+
+
+
+
+
+
+
 ## 📋 Requirements
 
 - Python 3.8+
