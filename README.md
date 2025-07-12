@@ -167,10 +167,6 @@ AI-AGENT-GROK-API/
 4. Push to your branch
 5. Open a Pull Request
 
-## 📄 License
-
-MIT License. See [LICENSE](LICENSE) for details.
-
 ## 🔗 Useful Links
 
 - [xAI Console](https://console.x.ai/)
@@ -179,8 +175,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-**⚠️ IMPORTANT:** Never commit your `.env` file or API keys to any public repository.
-
----
+LinkedIn: https://www.linkedin.com/in/alexsander-silveira-62b258200/
+Medium: https://medium.com/@alexsander.silveira1
 
 *Developed by Alexsander Silveira — empowering data-driven decisions in Brazil and beyond.*
