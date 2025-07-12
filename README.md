@@ -159,14 +159,6 @@ AI-AGENT-GROK-API/
 - **Port already in use:**
   - Use a different port, e.g. `--server.port 8503`
 
-## 🤝 Contribution
-
-1. Fork this project
-2. Create a feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
 ## 🔗 Useful Links
 
 - [xAI Console](https://console.x.ai/)
