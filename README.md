@@ -31,7 +31,7 @@ To provide a robust, user-friendly platform for exploring, comparing, and unders
 - **Streamlit Web App:** Clean, interactive interface for chat, data visualization, and memory management.
 - **Multilingual:** English and Portuguese support (easily extendable).
 - **Secure Config:** API keys managed via environment variables, never hardcoded.
-<img width="469" height="531" alt="image" src="https://github.com/user-attachments/assets/139903e4-39ee-47e4-a45c-6b6ac94b8bdc" />
+<img width="656" height="522" alt="image" src="https://github.com/user-attachments/assets/b0ef5db0-d3ef-42cd-b5a6-32770b161557" />
 
 
 ## 🛠️ Features
