@@ -31,6 +31,34 @@ To provide a robust, user-friendly platform for exploring, comparing, and unders
 - **Streamlit Web App:** Clean, interactive interface for chat, data visualization, and memory management.
 - **Multilingual:** English and Portuguese support (easily extendable).
 - **Secure Config:** API keys managed via environment variables, never hardcoded.
+           ┌─────────────────────┐
+           │    Streamlit App    │
+           │  Interface Visual   │
+           └────────┬────────────┘
+                    │
+     ┌──────────────▼─────────────┐
+     │    Memory System           │
+     │ Contexto & Histórico       │
+     └────────┬─────────┬────────┘
+              │         │
+    ┌─────────▼──┐   ┌──▼─────────┐
+    │  Grok API  │   │ Decision   │
+    │ Integration│   │  Engine    │
+    └─────┬──────┘   │ Confiança  │
+          │          └─────┬──────┘
+          │                │
+     ┌────▼────┐     ┌─────▼─────┐
+     │ Natural │     │ DuckDB DB │
+     │Language │     │ Análises  │
+     │Analysis │     │ Locais    │
+     └─────────┘     └───────────┘
+
+           ┌─────────────────────┐
+           │  Secure Config      │
+           │ (.env API Keys)     │
+           └─────────────────────┘
+
+          🗣 Multilingual: EN / PT
 
 ## 🛠️ Features
 
